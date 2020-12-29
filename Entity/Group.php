@@ -174,4 +174,21 @@ class Group implements GroupInterface
         }
     }
 
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->isEnabled;
+    }
+
+    /**
+     * @param bool $isEnabled
+     */
+    public function setIsEnabled($isEnabled)
+    {
+        $this->isEnabled = $isEnabled;
+    }
+
+
 }
