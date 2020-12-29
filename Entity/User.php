@@ -39,50 +39,50 @@ class User extends BaseFOSUser
     /**
      * @ORM\Column(type="string")
      */
-    private $firstName = '';
+    protected $firstName = '';
 
     /**
      * @ORM\Column(type="string")
      */
-    private $lastName = '';
+    protected $lastName = '';
 
     /**
      * @ORM\Column(type="string")
      */
-    private $hash = '';
+    protected $hash = '';
 
     /**
      * @ORM\Column(type="string")
      */
-    private $image = '';
+    protected $image = '';
 
     /**
      * @Assert\Image(maxWidth=1200, maxHeight=1200, minWidth=200, minHeight=200)
      * @Vich\UploadableField(mapping="image", fileNameProperty="image")
      */
-    private $imageFile;
+    protected $imageFile;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $disabledAt;
+    protected $disabledAt;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
      */
-    private $validatedTokenTo;
+    protected $validatedTokenTo;
 
     /**
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     public function getMainClient()
     {
