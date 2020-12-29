@@ -197,7 +197,4 @@ class Group implements GroupInterface
         $this->isEnabled = $isEnabled;
     }
 
-
-public function getRol
-
 }
