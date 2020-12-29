@@ -24,6 +24,13 @@ use JMS\Serializer\Annotation as JMS;
  */
 class Group implements GroupInterface
 {
+
+    /**
+     * @ORM\Column(type="array")
+     * @JMS\Expose()
+     */
+    protected $roles;
+
     /**
      * @ORM\Column(type="string")
      * @JMS\Expose()
@@ -190,5 +197,7 @@ class Group implements GroupInterface
         $this->isEnabled = $isEnabled;
     }
 
+
+public function getRol
 
 }
