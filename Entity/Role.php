@@ -17,7 +17,6 @@ namespace MadForWebs\UserBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use FOS\UserBundle\Model\User as BaseFOSUser;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\HttpFoundation\File\File as SFile;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -27,7 +26,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 /**
  * @ORM\MappedSuperclass
  */
-class User extends BaseFOSUser
+class Role
 {
     /**
      * Encrypted password. Must be persisted.
@@ -38,8 +37,7 @@ class User extends BaseFOSUser
 
     public function __construct()
     {
-        parent::__construct();
-        $this->setHash(sha1(uniqid(true).time().'a'));
+        $this->name = ""
     }
 
 
@@ -48,7 +46,7 @@ class User extends BaseFOSUser
      */
     public function __toString()
     {
-        return sprintf('%s', $this->getFullName());
+        return sprintf('%s', $this->getName());
     }
 
 
