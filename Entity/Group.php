@@ -136,6 +136,16 @@ class Group implements GroupInterface
         return $this->updatedAt;
     }
 
+    
+    public function isGranted($role)
+    {
+        $inRoles = in_array($role, $this->getRoles());
+        if (!$inRoles) {
+            return false;
+        }
+        return $inRoles;
+    }
+
     /**
      * {@inheritdoc}
      */
