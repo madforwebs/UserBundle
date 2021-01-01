@@ -37,7 +37,7 @@ class Role
 
     public function __construct()
     {
-        $this->name = ""
+        $this->name = "";
     }
 
 
