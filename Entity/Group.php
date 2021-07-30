@@ -35,24 +35,24 @@ class Group implements GroupInterface
      * @ORM\Column(type="string")
      * @JMS\Expose()
      */
-    private $name;
+    protected $name;
 
     /**
      * @ORM\Column(type="boolean")
      */
-    private $isEnabled = true;
+    protected $isEnabled = true;
 
     /**
      * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
-    private $createdAt;
+    protected $createdAt;
 
     /**
      * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      */
-    private $updatedAt;
+    protected $updatedAt;
 
     /**
      * @ORM\Id
